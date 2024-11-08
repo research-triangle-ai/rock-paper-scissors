@@ -37,7 +37,7 @@ const App = () => {
 
   useEffect(() => {
     const init = async () => {
-      const baseModelURL = `${window.location.href}model`;
+      const baseModelURL = `model`;
 
       // create session
       const arrBufNet = await download(
