@@ -454,7 +454,7 @@ const App = () => {
       )}
 
       <div className="footer-links">
-        <a href="/tech.html">Learn about the technology</a>
+        <a href="tech.html">Learn about the technology</a>
         <span className="dot-separator">•</span>
         <a href="https://github.com/research-triangle-ai/rock-paper-scissors">Source code on GitHub</a>
       </div>

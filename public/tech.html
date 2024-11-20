@@ -23,13 +23,17 @@
         }
 
         .logo-container {
-            position: absolute;
-            left: 20px;
-            top: 20px;
+            width: 100%;
+            padding: 15px 20px;
             display: flex;
+            flex-direction: row;
             align-items: center;
             text-decoration: none;
             color: inherit;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 5;
         }
 
         .logo-container img {
@@ -41,6 +45,7 @@
         .org-name {
             font-size: 1.1rem;
             font-weight: 500;
+            line-height: 1.2;
         }
 
         .hero {
@@ -48,7 +53,7 @@
             padding: 60px 20px;
             background: linear-gradient(to right, #f8f9fa, #e9ecef);
             border-radius: 10px;
-            margin: 40px 0;
+            margin: 20px 0;
         }
 
         .hero h1 {
@@ -114,8 +119,17 @@
         }
 
         @media (max-width: 768px) {
+            .logo-container {
+                padding: 10px 15px;
+            }
+            
+            .logo-container img {
+                width: 32px;
+                height: 32px;
+            }
+            
             .org-name {
-                display: none;
+                font-size: 0.9rem;
             }
 
             .hero {
