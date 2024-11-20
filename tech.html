@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors - Technology Stack</title>
+    <link rel="icon" type="image/png" href="/icon/icon-72x72.png" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Oxygen", "Ubuntu",
+                "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .logo-container {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo-container img {
+            width: 40px;
+            height: 40px;
+            margin-right: 12px;
+        }
+
+        .org-name {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #212529;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .tech-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tech-card h3 {
+            display: flex;
+            align-items: center;
+            color: #212529;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            gap: 12px;
+        }
+
+        .code-block {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .architecture {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .architecture img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .tech-icon {
+            width: 28px;
+            height: 28px;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            .org-name {
+                display: none;
+            }
+
+            .hero {
+                padding: 40px 20px;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .back-to-game {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background-color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-game:hover {
+            background-color: white;
+            color: black;
+            box-shadow: 0 0 0 2px black;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://research-triangle.ai" class="logo-container">
+        <img src="images/logo.svg" alt="Research Triangle AI Society Logo">
+        <span class="org-name">Research Triangle AI Society</span>
+    </a>
+
+    <div class="hero">
+        <h1>Technology Behind the Game</h1>
+        <p>Exploring the cutting-edge technologies that power our Rock Paper Scissors AI</p>
+        <a href="/" class="back-to-game">Back to Game</a>
+    </div>
+
+    <div class="tech-grid">
+        <div class="tech-card">
+            <h3>
+                <img src="images/yolo-icon.png" alt="YOLO" class="tech-icon" style="height: 32px; width: auto;">
+                YOLOv10
+            </h3>
+            <p>Latest iteration of the YOLO (You Only Look Once) object detection system. Provides real-time hand gesture recognition with high accuracy and low latency, perfect for interactive gaming.</p>
+            <div class="code-block">
+                <code>
+                    // Object detection with YOLOv10
+                    const { output0 } = await session.net.run({ 
+                        images: letterbox 
+                    });
+                </code>
+            </div>
+        </div>
+
+        <div class="tech-card">
+            <h3>
+                <img src="images/onnx-icon.png" alt="ONNX Runtime" class="tech-icon" style="height: 32px; width: auto;">
+                ONNX Runtime Web
+            </h3>
+            <p>High-performance inference engine for ONNX models in the browser. Enables running complex neural networks directly in the browser without server calls.</p>
+            <div class="code-block">
+                <code>
+                    const session = await InferenceSession.create(
+                        modelBuffer
+                    );
+                </code>
+            </div>
+        </div>
+
+        <div class="tech-card">
+            <h3>
+                <img src="images/wasm-icon.png" alt="WebAssembly" class="tech-icon" style="height: 32px; width: auto;">
+                WebAssembly (WASM)
+            </h3>
+            <p>Powers the neural network inference with near-native performance. Allows complex computations to run efficiently in the browser.</p>
+        </div>
+
+        <div class="tech-card">
+            <h3>
+                <img src="images/react-icon.png" alt="React" class="tech-icon" style="height: 32px; width: auto;">
+                React
+            </h3>
+            <p>Powers the responsive UI and game state management. Enables smooth updates and transitions as you play against the AI.</p>
+        </div>
+    </div>
+
+    <div class="architecture">
+        <h2>System Architecture</h2>
+        <!-- <img src="images/architecture.png" alt="System Architecture"> -->
+        <p>The system uses a pipeline architecture where webcam input is processed through YOLOv10 for gesture recognition, then fed into the game logic for real-time interaction.</p>
+    </div>
+
+    <div class="tech-card">
+        <h3>Performance Optimizations</h3>
+        <ul style="list-style-position: inside; margin: 15px 0;">
+            <li>Model quantization for reduced size and faster inference</li>
+            <li>WebAssembly for near-native performance</li>
+            <li>Efficient frame capture and processing</li>
+            <li>Movement detection to optimize inference timing</li>
+        </ul>
+    </div>
+
+    <div style="text-align: center; margin: 40px 0;">
+        <a href="/" class="back-to-game">Return to Game</a>
+    </div>
+</body>
+</html> 
