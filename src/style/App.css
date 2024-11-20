@@ -17,7 +17,8 @@
   background: white;
   z-index: 4;
   width: 100%;
-  padding: 10px 0;
+  padding: 25px 0 10px;
+  margin-top: 0;
 }
 
 .header p {
@@ -222,5 +223,46 @@ button:hover {
   
   .game-results > p {
     font-size: 1.4em;
+  }
+}
+
+.logo-container {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-container img {
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+
+.org-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .logo-container {
+    left: 10px;
+    top: 10px;
+  }
+  
+  .logo-container img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .org-name {
+    display: none;
+  }
+  
+  .header {
+    padding-top: 20px;
   }
 }

@@ -293,6 +293,10 @@ const App = () => {
 
   return (
     <div className="App">
+      <a href="https://research-triangle.ai" className="logo-container">
+        <img src="/images/logo.svg" alt="Research Triangle AI Society Logo" />
+        <span className="org-name">Research Triangle AI Society</span>
+      </a>
       {loading && (
         <Loader>
           {loading.progress
