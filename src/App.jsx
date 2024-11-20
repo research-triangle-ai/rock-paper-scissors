@@ -294,7 +294,7 @@ const App = () => {
   return (
     <div className="App">
       <a href="https://research-triangle.ai" className="logo-container">
-        <img src="/images/logo.svg" alt="Research Triangle AI Society Logo" />
+        <img src="images/logo.svg" alt="Research Triangle AI Society Logo" />
         <span className="org-name">Research Triangle AI Society</span>
       </a>
       {loading && (
@@ -452,6 +452,12 @@ const App = () => {
           </div>
         </div>
       )}
+
+      <div className="footer-links">
+        <a href="/tech.html">Learn about the technology</a>
+        <span className="dot-separator">•</span>
+        <a href="https://github.com/research-triangle-ai/rock-paper-scissors">Source code on GitHub</a>
+      </div>
     </div>
   );
 };
