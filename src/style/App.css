@@ -42,8 +42,8 @@
   position: relative;
   width: 100%;
   max-width: 720px;
-  height: 500px;
-  margin: 20px 0;
+  aspect-ratio: 16/9;
+  margin: 20px auto;
 }
 
 .content video {
@@ -88,9 +88,9 @@ button:hover {
 }
 
 .game-results {
-  width: 100%;
+  width: 90%;
   max-width: 720px;
-  margin-top: 5px;
+  margin: 20px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -187,4 +187,40 @@ button:hover {
 .header-row *:nth-child(2), .game-move *:nth-child(2) {
   text-align: left;
   margin-left: 5px;
+}
+
+.header h1 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  text-align: center;
+  padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin: 10px auto;
+  }
+  
+  .game-moves {
+    width: 100%;
+    padding: 0 10px;
+  }
+  
+  .winning-bar-container {
+    width: 200px;
+  }
+  
+  button {
+    padding: 8px 12px;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    aspect-ratio: 4/3;
+  }
+  
+  .game-results > p {
+    font-size: 1.4em;
+  }
 }

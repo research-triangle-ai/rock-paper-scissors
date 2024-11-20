@@ -45,15 +45,17 @@ code {
 }
 
 .game-moves {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  max-width: 350px;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 
 .header-row {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  padding: 0 clamp(20px, 5vw, 40px);
 }
 
 .header {
@@ -67,6 +69,7 @@ code {
   align-items: center;
   width: 100%;
   margin: 5px 0;
+  padding: 0 clamp(15px, 4vw, 25px);
 }
 
 .player-move,
@@ -77,6 +80,21 @@ code {
 }
 
 .game-move img {
-  width: 50px;
-  height: 50px;
+  width: clamp(30px, 8vw, 50px);
+  height: auto;
+  aspect-ratio: 1;
+}
+
+@media (max-width: 480px) {
+  .game-results {
+    margin-top: 10px;
+  }
+  
+  .winning-rate-container span {
+    font-size: 0.9em;
+  }
+  
+  .game-move:nth-child(2) {
+    scale: 110%;
+  }
 }

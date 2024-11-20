@@ -1,6 +1,6 @@
 # Rock Paper Scissors
 
-Play Rock Paper Scissors against an computer opponent, right inside your browser.
+Play Rock Paper Scissors against a computer opponent, right inside your browser.
 
 Using YOLOv10 in browser with onnxruntime-web and `wasm` backend.
 
